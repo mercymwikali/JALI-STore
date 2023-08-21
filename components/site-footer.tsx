@@ -11,7 +11,7 @@ export function SiteFooter() {
           aria-label="Footer"
         >
           {siteConfig.footer.map((item) => (
-            <div key={item.name} className="pb-6">
+            <div key={item.name} className="pb-8">
               <Link href={item.href} className="text-sm leading-6">
                 {item.name}
               </Link>

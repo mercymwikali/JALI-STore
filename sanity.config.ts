@@ -12,9 +12,9 @@ import {schema} from './sanity/schema'
 
 export default defineConfig({
   basePath: '/studio',
-  projectId:'qc274oq0',
+  projectId:'ewza4gnf',
   dataset: 'production',
-  title:'Jali-Store',
+  title:'jali-store',
   apiVersion:'2023-08-14',
   // Add and edit the content schema in the './sanity/schema' folder
   schema,

@@ -5,9 +5,9 @@ const { fontFamily } = require("tailwindcss/defaultTheme")
  */
 module.exports = {
   content: [
-    "./node_modules/flowbite-react/**/*.js",
-    "./pages/**/*.{ts,tsx}",
-    "./public/**/*.html",
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   plugins: [
    [ require("flowbite/plugin")],
@@ -22,6 +22,11 @@ module.exports = {
       screens: {
         "2xl": "1400px",
       },
+    },
+    backgroundImage: {
+      'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      'gradient-conic':
+        'iconic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
     },
     extend: {
       colors: {

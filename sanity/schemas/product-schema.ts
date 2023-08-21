@@ -13,7 +13,7 @@ export const product = defineType({
         // Define the field for a reference to another document. This is called an inline object in Sanity.
         {
             name: "slug",
-            title: "Slug (URL)",
+            title: "Slug",
             type: "slug",
             options: {
                 source: 'name'

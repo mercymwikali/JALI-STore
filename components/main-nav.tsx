@@ -8,7 +8,7 @@ export function MainNav() {
   return (
     <div className="flex gap-6 md:gap-8">
       <Link href="/" className="flex items-center space-x-2">
-        <Image src={logo} alt="logo" className="h-auto flex-wrap w-20"/>
+        <Image src={logo} alt="logo" className="h-auto  w-24"/>
         <span className="inline-block text-xl font-bold">
           {siteConfig.name}
         </span>
