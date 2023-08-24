@@ -15,14 +15,14 @@ export function SiteHeader() {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const defaultSearchQuery = searchParams.get('search') ??  ""
+  const defaultSearchQuery = searchParams.get('search') ?? ""
 
-  if(pathname.startsWith("./studio")) return null 
+  if (pathname.startsWith("./studio")) return null
 
-  function onSubmit(event: React.SyntheticEvent<HTMLFormElement>){
+  function onSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget)
-    const searchQuery =formData.get('search')
+    const searchQuery = formData.get('search')
     router.replace(`/search=${searchQuery}`)
   }
 
@@ -31,8 +31,8 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between space-x-4 px-6 sm:space-x-0">
         <MainNav />
         <form
-        onSubmit={onSubmit}
-         className="hidden items-center lg:inline-flex">
+          onSubmit={onSubmit}
+          className="hidden items-center lg:inline-flex">
           <Input
             id="search"
             name="search"
@@ -53,12 +53,13 @@ export function SiteHeader() {
           </Link>
           <ThemeToggle />
           {process.env.NODE_ENV === 'production' && (
-            <Link href="./studio">
+            <Link href="https://jali-store.sanity.studio/">
               <Button size="sm" variant="ghost">
                 <Edit className="h-5 w-5" />
               </Button>
             </Link>
           )}
+
         </div>
 
       </div>
