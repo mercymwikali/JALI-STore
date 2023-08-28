@@ -15,6 +15,7 @@ export function SiteHeader() {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
+  const { cartCount } = useShoppingCart()
   const defaultSearchQuery = searchParams.get('search') ?? ""
 
   if (pathname.startsWith("./studio")) return null
@@ -47,19 +48,18 @@ export function SiteHeader() {
           <Link href="/cart">
             <Button size="sm" variant="ghost">
               <ShoppingBag className="h-5 w-5" />
-              <span className="ml-2 text-sm font-bold">0</span>
+              <span className="ml-2 text-sm font-bold"></span>
               <span className="sr-only">Cart</span>
             </Button>
           </Link>
           <ThemeToggle />
-          {process.env.NODE_ENV === 'production' && (
-            <Link href="https://jali-store.sanity.studio/">
+          {process.env.NODE_ENV === 'development' && (
+            <Link href="./studio">
               <Button size="sm" variant="ghost">
                 <Edit className="h-5 w-5" />
               </Button>
             </Link>
           )}
-
         </div>
 
       </div>
