@@ -53,7 +53,7 @@ export function SiteHeader() {
             </Button>
           </Link>
           <ThemeToggle />
-          {process.env.NODE_ENV === 'production' && (
+          {process.env.NODE_ENV === 'development' && (
             <Link href="./studio">
               <Button size="sm" variant="ghost">
                 <Edit className="h-5 w-5" />
